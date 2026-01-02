@@ -1,0 +1,173 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* ================= LAYOUT ================= */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ================= MINDMAP CANVAS ================= */
+.mindmap-container {
+  flex: 2;
+  padding: 24px;
+  overflow: auto;
+
+  /* Dark grid background */
+  background-color: #020617;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ================= TOOLBAR ================= */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.btn-primary { background: #6366f1; }
+.btn-secondary { background: #0ea5e9; }
+.btn-success { background: #22c55e; }
+.btn-warning { background: #f59e0b; }
+
+/* ================= NODE STYLES ================= */
+.node {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #020617;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.node:hover {
+  transform: scale(1.06);
+}
+
+/* Selected node */
+.node.selected {
+  outline: 3px solid #6366f1;
+}
+
+/* ================= NODE LEVEL COLORS ================= */
+.node.level-0 {
+  background: #93c5fd;
+  font-size: 20px;
+  padding: 20px 34px;
+}
+
+.node.level-1 {
+  background: #86efac;
+}
+
+.node.level-2 {
+  background: #fdba74;
+}
+
+.node.level-3 {
+  background: #f9a8d4;
+}
+
+/* ================= CHILDREN LAYOUT ================= */
+.children {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+/* ================= TOOLTIP ================= */
+.tooltip {
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #020617;
+  color: #e5e7eb;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  max-width: 240px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  z-index: 50;
+}
+
+/* ================= SIDE PANEL ================= */
+.side-panel {
+  flex: 1;
+  padding: 24px;
+  background: #020617;
+  border-left: 1px solid #1e293b;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.75);
+}
+
+/* ================= FORM ELEMENTS ================= */
+label {
+  display: block;
+  margin-top: 14px;
+  font-size: 13px;
+  color: #cbd5f5;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* ================= BUTTON ROW ================= */
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}

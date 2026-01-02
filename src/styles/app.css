@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* ===== Layout ===== */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== Mindmap Canvas ===== */
+.mindmap-container {
+  flex: 2;
+  padding: 20px;
+  overflow: auto;
+  background-color: #020617;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ===== Toolbar ===== */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-primary { background: #6366f1; }
+.btn-secondary { background: #0ea5e9; }
+.btn-success { background: #22c55e; }
+.btn-warning { background: #f59e0b; }
+
+/* ===== Nodes ===== */
+.node {
+  border-radius: 999px;
+  padding: 10px 18px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+  color: #020617;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+.node:hover {
+  transform: scale(1.05);
+}
+
+.node.root {
+  background: #93c5fd;
+  font-size: 18px;
+  padding: 18px 28px;
+}
+
+.node.level-1 { background: #86efac; }
+.node.level-2 { background: #fdba74; }
+.node.level-3 { background: #f9a8d4; }
+
+.node.selected {
+  outline: 3px solid #6366f1;
+}
+
+/* ===== Hierarchy spacing ===== */
+.children {
+  margin-left: 60px;
+  margin-top: 16px;
+}
+
+/* ===== Tooltip ===== */
+.tooltip {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #020617;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  max-width: 240px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* ===== Side Panel ===== */
+.side-panel {
+  flex: 1;
+  background: #020617;
+  border-left: 1px solid #1e293b;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.7);
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}

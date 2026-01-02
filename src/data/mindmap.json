@@ -1,0 +1,57 @@
+{
+  "id": "root",
+  "title": "Frontend Development",
+  "summary": "Core areas of frontend engineering",
+  "description": "Frontend development focuses on building user interfaces and experiences that users interact with directly.",
+  "metadata": {
+    "notes": "This is the central topic",
+    "level": 0
+  },
+  "children": [
+    {
+      "id": "html",
+      "title": "HTML",
+      "summary": "Structure of the web",
+      "description": "HTML provides the basic structure of web pages using elements and tags.",
+      "metadata": {
+        "notes": "Semantic markup",
+        "level": 1
+      },
+      "children": []
+    },
+    {
+      "id": "css",
+      "title": "CSS",
+      "summary": "Styling and layout",
+      "description": "CSS is used to style and layout web pages, for example to change colors, layouts, and animations.",
+      "metadata": {
+        "notes": "Flexbox, Grid",
+        "level": 1
+      },
+      "children": []
+    },
+    {
+      "id": "javascript",
+      "title": "JavaScript",
+      "summary": "Logic and interactivity",
+      "description": "JavaScript enables dynamic behavior such as events, data handling, and API interaction.",
+      "metadata": {
+        "notes": "ES6+, async",
+        "level": 1
+      },
+      "children": [
+        {
+          "id": "react",
+          "title": "React",
+          "summary": "Component-based UI",
+          "description": "React helps build reusable UI components and manage state efficiently.",
+          "metadata": {
+            "notes": "Hooks, state, props",
+            "level": 2
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}
